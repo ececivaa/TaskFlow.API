@@ -1,0 +1,25 @@
+@TaskFlow_HostAddress = https://localhost:7295
+
+POST {{TaskFlow_HostAddress}}/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Yeni proje planlaması",
+  "description": "Proje kapsamı ve gereksinimlerin belirlenmesi",
+  "isCompleted": false
+}
+###
+GET https://localhost:7295/api/tasks
+
+###
+
+PUT https://localhost:7295/api/tasks/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Müşteri taleplerinin analizi tamamlandı",
+  "description": "Gereksinimler analiz edildi ve onaylandı",
+  "isCompleted": true
+}
+
